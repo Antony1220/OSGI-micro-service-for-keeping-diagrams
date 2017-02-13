@@ -1,0 +1,113 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DrawIo",
+		"_postman_id": "404558ca-5e32-1a83-3738-22cfa08ba971",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello",
+			"request": {
+				"url": "http://localhost:8080/drawio/idrawioservice/hello",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add figure id 0",
+			"request": {
+				"url": "http://localhost:8080/drawio/idrawioservice/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\": \"0\",\r\n   \"x\": \"25\",\r\n   \"y\": \"25\",\r\n   \"width\": \"100\",\r\n   \"height\": \"60\",\r\n   \"type\": \"Rectangle\"\r\n}"
+				},
+				"description": "Test add method"
+			},
+			"response": []
+		},
+		{
+			"name": "Add figure id 1",
+			"request": {
+				"url": "http://localhost:8080/drawio/idrawioservice/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\": \"1\",\r\n   \"x\": \"25\",\r\n   \"y\": \"25\",\r\n   \"width\": \"100\",\r\n   \"height\": \"60\",\r\n   \"type\": \"Circle\"\r\n}"
+				},
+				"description": "Test add method"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"url": "http://localhost:8080/drawio/idrawioservice/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\": \"0\",\r\n   \"x\": \"30\",\r\n   \"y\": \"25\",\r\n   \"width\": \"100\",\r\n   \"height\": \"60\",\r\n   \"type\": \"Rectangle\"\r\n}"
+				},
+				"description": "Test update method"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"url": "http://localhost:8080/drawio/idrawioservice/remove",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\": \"0\",\r\n   \"x\": \"30\",\r\n   \"y\": \"25\",\r\n   \"width\": \"100\",\r\n   \"height\": \"60\",\r\n   \"type\": \"Rectangle\"\r\n}"
+				},
+				"description": "Test delete method"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Figures",
+			"request": {
+				"url": "http://localhost:8080/drawio/idrawioservice/getfigures",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
